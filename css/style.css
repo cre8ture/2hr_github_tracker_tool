@@ -1,0 +1,146 @@
+button {
+    background-color: black;
+    color: white;
+    border: none;
+    margin: 5px;
+}
+
+/* Apply a monospace font to the entire site */
+body {
+    font-family: 'Courier New', Courier, monospace;
+    background-color: #f0f0f0; /* Light background for a minimalist look */
+    color: #333; /* Dark text for contrast */
+    margin: 0;
+    padding: 0;
+}
+
+
+#repoList {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, max-content)); /* Adjusted for content width */
+    gap: 10px; /* Spacing between grid items */
+    padding: 10px;
+    overflow: hidden; /* Hide overflow */
+}
+
+/* Style each repository item */
+#repoList div {
+    background-color: #fff;
+    border: 2px solid #333;
+    padding: 15px;
+    overflow: hidden;
+    box-shadow: 5px 5px 0 #333;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Add transition for smooth effect */
+}
+
+/* Style for hover effect */
+#repoList div:hover {
+    transform: scale(1.1); /* Scale up the card */
+    box-shadow: 8px 8px 0 #333; /* Optional: Increase shadow size for added effect */
+}
+
+
+/* Style the buttons with a minimalist and modern look */
+button {
+    background-color: #333; /* Dark background */
+    color: #fff; /* Light text */
+    border: none;
+    padding: 5px;
+    margin: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+button:hover {
+    background-color: #fff; /* Invert colors on hover */
+    color: #333;
+}
+
+/* Style the input field */
+input[type="text"] {
+    border: 2px solid #333; /* Dark border */
+    padding: 10px;
+    margin: 5px;
+}
+
+#fetchRepos {
+    background-color: #333; /* Dark background */
+    color: #fff; /* White text */
+    border: none;
+    padding: 10px 20px; /* Adjust padding for a more rectangular shape */
+    font-family: 'Courier New', Courier, monospace;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s, box-shadow 0.3s, transform 0.3s; /* Add transitions for shadow and transform */
+}
+
+#fetchRepos:hover {
+    background-color: #555; /* Slightly lighter background on hover */
+    box-shadow: 5px 5px 0 #333; /* Brutalist shadow for a popping effect */
+    transform: translateY(-2px); /* Slight upward movement on hover */
+}
+.tabs {
+    display: flex;
+    justify-content: flex-start;
+    border-bottom: 1px solid black;
+}
+
+.tabButton {
+    background-color: white;
+    color: black;
+    border: none;
+    border-bottom: 3px solid transparent;
+    margin-right: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.tabButton:hover {
+    background-color: #f0f0f0; /* Slight change on hover */
+}
+
+.tabButton.active {
+    background-color: black;
+    color: white;
+    border-bottom: 3px solid black;
+}
+
+/* Optional: Remove the right margin from the last tab button for alignment */
+.tabs .tabButton:last-child {
+    margin-right: 0;
+}
+
+
+.title-container {
+    position: relative;
+    text-align: center;
+    margin: 20px 0;
+    display: block; /* Initially hidden */
+}
+
+.title {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 6.5em; /* Larger font size */
+    font-weight: bold;
+    color: #333;
+    margin: 0;
+    padding-bottom: 10px;
+    position: relative;
+    z-index: 2; /* Ensure the title is above the square */
+}
+
+.animated-square {
+    position: absolute;
+    right: 10%; /* Adjust for positioning */
+    bottom: 10%;
+    width: 300px; /* Larger square size */
+    height: 300px;
+    background-color: white;
+    z-index: 1; /* Ensure the square is behind the title */
+    animation: color-shift 3s infinite alternate;
+}
+
+@keyframes color-shift {
+    0% { background-color: white; }
+    100% { background-color: gray; }
+}

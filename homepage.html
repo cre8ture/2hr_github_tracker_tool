@@ -1,0 +1,21 @@
+<link rel="stylesheet" href="css/style.css">
+<script src="js/script.js"></script>
+<div style="display: grid; grid-template-columns: 1fr auto; align-items: center;">
+    <div>
+        <input type="text" id="githubUsername" placeholder="Enter GitHub username">
+        <button id="fetchRepos">Fetch Repositories</button>
+    </div>
+    <div class="tabs">
+        <button id="showUsernames" class="tabButton">Usernames</button>
+        <button id="showVisitedProjects" class="tabButton">Visited Projects</button>
+        <button id="showAllProjects" class="tabButton">All Projects</button>
+        
+    </div>
+</div>
+<div class="title-container">
+    <h1 class="title">Search, Remember your favorite creators' githubs.</h1>
+    <div class="animated-square"></div>
+</div>
+
+<div id="repoList"></div>
+
